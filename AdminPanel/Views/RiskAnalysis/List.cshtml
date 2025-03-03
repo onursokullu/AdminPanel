@@ -1,0 +1,83 @@
+﻿@using BusinessService.Contracts.Responses
+@model List<GetRiskAnalysisDto>
+
+<!-- Main Content -->
+<div id="content">
+
+	
+	<!-- Begin Page Content -->
+	<div class="container-fluid">
+
+		<!-- Page Heading -->
+		<h1 class="h3 mb-2 text-gray-800">Risk Analizi Listesi</h1>
+		<p class="mb-4">
+			Bu sayfadan iş konusunun risk analizlerini inceleyebilirsiniz.
+		</p>
+
+		<!-- DataTales Example -->
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex align-items-center">
+				<h6 class="m-0 font-weight-bold text-primary mr-auto">Risk Analizleri</h6>
+
+				<a href="/RiskAnalysis/Create/@Context.Request.Query["businessTopicId"]" class="btn btn-success btn-icon-split ms-auto" style="margin-right: 0;">
+					<span class="icon text-white-50">
+						<i class="fas fa-check"></i>
+					</span>
+					<span class="text">Yeni Risk Analizi Oluştur</span>
+				</a>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+						<thead>
+							<tr>
+								<th>Analiz ismi</th>
+								<th>Kategori</th>
+								<th>Risk skoru</th>
+								<th>Oluşturulma tarihi</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<th>Analiz ismi</th>
+								<th>Kategori</th>
+								<th>Risk skoru</th>
+								<th>Oluşturulma tarihi</th>
+								<th></th>
+							</tr>
+						</tfoot>
+						<tbody>
+							@{
+								if (Model != null && Model.Any())
+								{
+									foreach (var item in Model)
+									{
+										<tr>
+											<td>@item.Name</td>
+											<td>@item.RiskCategory</td>
+											<td>@item.RiskScore</td>
+											<td>@item.CreatedAt</td>
+											<td class="d-flex justify-content-center">
+												<a class="btn btn-primary btn-icon-split">
+													<span class="icon text-white-50">
+														<i class="fas fa-arrow-right"></i>
+													</span>
+													<span class="text">Düzenle</span>
+												</a>
+											</td>
+										</tr>
+									}
+								}
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->

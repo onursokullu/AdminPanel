@@ -1,0 +1,81 @@
+﻿<div class="container-fluid">
+
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Yeni Risk Analizi Oluştur</h1>
+	<p class="mb-4">
+		Bu sayfadan risk analizi oluşturabilirsiniz.
+	</p>
+
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">İş Konuları</h6>
+		</div>
+		<div class="card-body">
+
+			<form>
+				<div class="form-group row">
+					<label for="risk-details" class="col-4 col-form-label">Name</label>
+					<div class="col-8">
+						<input id="name" name="name" placeholder="Name" type="text" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="risk-rule" class="col-4 col-form-label">Risk Rule</label>
+					<div class="col-8">
+						<select id="risk-rule" name="risk-rule" class="custom-select">
+							<option value="ComprehensiveRiskScore">Risk impact score</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="likelihood" class="col-4 col-form-label">Likelihood</label>
+					<div class="col-8">
+						<input id="likelihood" name="likelihood" placeholder="Likelihood" type="number" step="any" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="impact" class="col-4 col-form-label">Impact</label>
+					<div class="col-8">
+						<input id="impact" name="impact" placeholder="Impact" type="number" step="any" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="current-impact" class="col-4 col-form-label">Current Impact</label>
+					<div class="col-8">
+						<input id="current-impact" name="current-impact" placeholder="Current Impact" type="number" step="any" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="risk-details" class="col-4 col-form-label">Risk Details</label>
+					<div class="col-8">
+						<input id="risk-details" name="risk-details" placeholder="Risk Details" type="text" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="mitigation-plan" class="col-4 col-form-label">Riski Azaltmak İçin Yapılacaklar</label>
+					<div class="col-8">
+						<textarea id="mitigation-plan" name="mitigation-plan" cols="40" rows="5" class="form-control"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="risk-category" class="col-4 col-form-label">Risk Kategorisi</label>
+					<div class="col-8">
+						<input id="risk-category" name="risk-category" placeholder="Risk Kategorisi" type="text" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="offset-4 col-8">
+						<button name="submit" type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
